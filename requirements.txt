@@ -1,0 +1,8 @@
+pyqt5
+darkdetect
+loguru
+PyQt-Fluent-Widgets
+PyQt5-Frameless-Window
+pycryptdome
+imageio
+nuitka
