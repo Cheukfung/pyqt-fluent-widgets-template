@@ -214,6 +214,5 @@ class Ui_Dialog(object):
         self.login.setText(_translate("Dialog", "登陆"))
         self.copyright.setText(_translate("Dialog", "©Copyright 在配置文件修改"))
 from components.label_widget import ClickableLabel
-from components.my_fluent_widgets import CheckBox, PrimaryPushButton, PushButton
-from qfluentwidgets import LineEdit
+from qfluentwidgets import CheckBox, LineEdit, PrimaryPushButton, PushButton
 import resource_rc

@@ -430,7 +430,7 @@
   <customwidget>
    <class>CheckBox</class>
    <extends>QCheckBox</extends>
-   <header>components/my_fluent_widgets.h</header>
+   <header>qfluentwidgets</header>
   </customwidget>
   <customwidget>
    <class>LineEdit</class>
@@ -445,12 +445,12 @@
   <customwidget>
    <class>PushButton</class>
    <extends>QPushButton</extends>
-   <header>components/my_fluent_widgets</header>
+   <header>qfluentwidgets</header>
   </customwidget>
   <customwidget>
    <class>PrimaryPushButton</class>
    <extends>QPushButton</extends>
-   <header>components/my_fluent_widgets</header>
+   <header>qfluentwidgets</header>
   </customwidget>
  </customwidgets>
  <resources>

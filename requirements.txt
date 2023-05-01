@@ -1,8 +1,8 @@
 pyqt5
 darkdetect
 loguru
-PyQt-Fluent-Widgets
-PyQt5-Frameless-Window
-pycryptdome
+PyQt-Fluent-Widgets~=0.8.2
+PyQt5-Frameless-Window~=0.2.6
+pycryptodome
 imageio
 nuitka

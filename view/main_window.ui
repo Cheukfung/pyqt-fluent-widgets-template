@@ -106,15 +106,15 @@
  </widget>
  <customwidgets>
   <customwidget>
+   <class>PushButton</class>
+   <extends>QPushButton</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+  <customwidget>
    <class>PopUpAniStackedWidget</class>
    <extends>QStackedWidget</extends>
    <header>components/my_stacked_widgets</header>
    <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>PushButton</class>
-   <extends>QPushButton</extends>
-   <header>components/my_fluent_widgets</header>
   </customwidget>
  </customwidgets>
  <resources>

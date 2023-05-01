@@ -60,6 +60,6 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MyApp"))
         self.pushButton.setText(_translate("MainWindow", "page one"))
         self.pushButton_2.setText(_translate("MainWindow", "page two"))
-from components.my_fluent_widgets import PushButton
 from components.my_stacked_widgets import PopUpAniStackedWidget
+from qfluentwidgets import PushButton
 import resource_rc
