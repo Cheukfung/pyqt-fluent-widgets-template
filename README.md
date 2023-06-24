@@ -15,11 +15,11 @@
 
 ## 登录界面
 
-<img src="https://s1.ax1x.com/2023/04/22/p9Vn4wq.png">
+<img src="https://github.com/Cheukfung/pyqt-fluent-widgets-template/blob/main/example%20image/login.png?raw=true">
 
 ## 主界面
-
-<img src="https://s1.ax1x.com/2023/04/22/p9Vnhmn.png">
+<img src="https://github.com/Cheukfung/pyqt-fluent-widgets-template/blob/main/example%20image/main_window.png?raw=true">
+<img src="https://github.com/Cheukfung/pyqt-fluent-widgets-template/blob/main/example%20image/main_dark.png?raw=true">
 
 ## 实现
 
@@ -27,7 +27,7 @@
 
 ## 使用方法
 
-<img src="https://s1.ax1x.com/2023/04/22/p9VuOC8.png">
+<img src="https://github.com/Cheukfung/pyqt-fluent-widgets-template/blob/main/example%20image/qt%20desinger.png?raw=true">
 clone项目到本地，使用qt-designer打开view/main_window.ui文件，主界面由stackedwidget组成，默认有3个页面，分别是page1、page2和setting_page,使用时只需要把相应的控件添加到对应的页面即可。
 
 ## 添加stackedwidget页面
