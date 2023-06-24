@@ -5,6 +5,7 @@ from PyQt5.QtWidgets import QApplication
 
 from common.config import cfg
 from common.my_logger import my_logger as logger
+from common.public import show_dialog
 from view.login_window import LoginWindow
 from view.main_window import MainWindow
 
@@ -22,7 +23,6 @@ translator.load(f":/resource/i18n/zh.qm")
 app.installTranslator(translator)
 
 
-@logger.catch
 def main():
     if cfg.auto_login.value:
         logger.debug('判断是否登录')
@@ -39,4 +39,8 @@ def main():
         app.exec_()
 
 
-main()
+try:
+    main()
+except Exception as e:
+    logger.error(e)
+    show_dialog(parent=None, content='程序出现异常，请尝试重新运行！')

@@ -14,6 +14,13 @@ StandardTitleBar > QLabel {
     color: black;
 }
 
+CustomTitleBar>QLabel#titleLabel {
+    color: black;
+    background: transparent;
+    font: 13px 'Microsoft YaHei';
+    padding: 0 10px
+}
+
 MinimizeButton {
     qproperty-normalColor: black;
     qproperty-normalBackgroundColor: transparent;

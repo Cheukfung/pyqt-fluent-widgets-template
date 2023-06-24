@@ -21,12 +21,14 @@ class NavigationInterface(FNavigationInterface):
             routeKey=self.parent().ui.stackedWidget.widget(0).objectName(),
             icon=MyIcon.CLICK,
             text='page one',
+            tooltip='page one',
             onClick=lambda: self.index_changed.emit(0)
         )
         self.addItem(
             routeKey=self.parent().ui.stackedWidget.widget(1).objectName(),
             icon=MyIcon.EXCEL,
             text='page two',
+            tooltip='page two',
             onClick=lambda: self.index_changed.emit(1)
         )
 

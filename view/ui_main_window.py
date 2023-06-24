@@ -28,7 +28,7 @@ class Ui_MainWindow(object):
         self.page_1.setStyleSheet("")
         self.page_1.setObjectName("page_1")
         self.pushButton = PushButton(self.page_1)
-        self.pushButton.setGeometry(QtCore.QRect(365, 240, 90, 30))
+        self.pushButton.setGeometry(QtCore.QRect(290, 230, 171, 30))
         self.pushButton.setObjectName("pushButton")
         self.stackedWidget.addWidget(self.page_1)
         self.page_2 = QtWidgets.QWidget()
@@ -58,7 +58,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MyApp"))
-        self.pushButton.setText(_translate("MainWindow", "page one"))
+        self.pushButton.setText(_translate("MainWindow", "异步操作(多线程）"))
         self.pushButton_2.setText(_translate("MainWindow", "page two"))
 from components.my_stacked_widgets import PopUpAniStackedWidget
 from qfluentwidgets import PushButton

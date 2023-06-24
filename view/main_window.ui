@@ -45,14 +45,14 @@
       <widget class="PushButton" name="pushButton">
        <property name="geometry">
         <rect>
-         <x>365</x>
-         <y>240</y>
-         <width>90</width>
+         <x>290</x>
+         <y>230</y>
+         <width>171</width>
          <height>30</height>
         </rect>
        </property>
        <property name="text">
-        <string>page one</string>
+        <string>异步操作(多线程）</string>
        </property>
       </widget>
      </widget>

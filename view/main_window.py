@@ -1,9 +1,11 @@
 from qfluentwidgets import ToolTipFilter, qconfig
-from qframelesswindow import FramelessWindow, StandardTitleBar
+from qframelesswindow import FramelessWindow
 
 from common.config import cfg
 from common.my_logger import my_logger as logger
-from common.public import set_stylesheet, show_dialog, show_toast
+from common.public import set_stylesheet, show_dialog, show_toast, show_loading, hide_loading
+from common.threads import Worker
+from components.custom_titlebar import CustomTitleBar
 from view.navigation_interface import NavigationInterface
 from view.setting_interface import SettingInterface
 from view.ui_main_window import Ui_MainWindow
@@ -12,10 +14,15 @@ from view.ui_main_window import Ui_MainWindow
 class MainWindow(FramelessWindow):
     def __init__(self):
         super().__init__()
+        self.settingInterface = None
+        self.navigation_interface = None
+        self.StateTooltip = None
         logger.debug('init main window')
-        self.setTitleBar(StandardTitleBar(self))
+        # self.setTitleBar(StandardTitleBar(self))
+        self.setTitleBar(CustomTitleBar(self))
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        self.worker = Worker()
         self.init_navigation()
         self.init_setting_page()
         self.init_btn_tool_tips()
@@ -52,7 +59,32 @@ class MainWindow(FramelessWindow):
 
     def bind_event(self):
         logger.debug('bind event')
-        self.ui.pushButton.clicked.connect(lambda: show_dialog(self, '测试' * 100))
+        self.titleBar.searchSignal.connect(lambda: show_toast(self, '提示', '点击了搜索'))
+        self.ui.pushButton.clicked.connect(self.do_something)
+        self.ui.pushButton_2.clicked.connect(lambda: show_dialog(self, '测试' * 100))
+        # 绑定worker事件
+        self.worker.do_something_success.connect(self.on_do_something_success)
+        self.worker.do_something_failed.connect(self.on_do_something_failed)
+
+    def do_something(self):
+        logger.debug('do something')
+        if self.worker.isRunning():
+            logger.debug('请等待上一个任务完成')
+            return
+        arg = {'hello': 'world'}
+        self.worker.set_action('do_something', arg)
+        show_loading(self, '正在模拟耗时操作，3秒后返回结果', '加载中')
+        self.worker.start()
+
+    def on_do_something_success(self, result):
+        logger.debug('do something success')
+        show_toast(self, '提示', result['result'])
+        hide_loading(self, result['result'])
+
+    def on_do_something_failed(self, msg):
+        logger.debug('do something failed')
+        show_toast(self, '提示', msg)
+        hide_loading(self, '加载失败')
 
     def on_current_interface_changed(self, index):
         widget = self.ui.stackedWidget.widget(index)
