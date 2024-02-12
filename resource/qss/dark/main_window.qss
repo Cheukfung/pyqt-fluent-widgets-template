@@ -1,0 +1,57 @@
+#stackedWidget>QWidget {
+    border: 1px solid rgb(29, 29, 29);
+    border-right: none;
+    border-bottom: none;
+    border-top-left-radius: 10px;
+    background-color: rgb(39, 39, 39);
+}
+
+
+MainWindow {
+    background-color: rgb(32, 32, 32);
+}
+
+StandardTitleBar {
+    background-color: transparent;
+}
+
+StandardTitleBar > QLabel,
+Widget > QLabel {
+    color: white;
+}
+
+
+CustomTitleBar>QLabel#titleLabel {
+    color: white;
+    background: transparent;
+    font: 13px 'Microsoft YaHei';
+    padding: 0 4px
+}
+
+CustomTitleBar {
+    background-color: transparent;
+}
+
+
+MinimizeButton {
+    qproperty-normalColor: white;
+    qproperty-normalBackgroundColor: transparent;
+    qproperty-hoverColor: white;
+    qproperty-hoverBackgroundColor: rgba(255, 255, 255, 26);
+    qproperty-pressedColor: white;
+    qproperty-pressedBackgroundColor: rgba(255, 255, 255, 51)
+}
+
+MaximizeButton {
+    qproperty-normalColor: white;
+    qproperty-normalBackgroundColor: transparent;
+    qproperty-hoverColor: white;
+    qproperty-hoverBackgroundColor: rgba(255, 255, 255, 26);
+    qproperty-pressedColor: white;
+    qproperty-pressedBackgroundColor: rgba(255, 255, 255, 51)
+}
+
+CloseButton {
+    qproperty-normalColor: white;
+    qproperty-normalBackgroundColor: transparent;
+}

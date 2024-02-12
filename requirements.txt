@@ -1,0 +1,7 @@
+pyside6
+loguru~=0.7.2
+PySide6-Fluent-Widgets
+pycryptodome
+nuitka
+darkdetect~=0.8.0
+imageio

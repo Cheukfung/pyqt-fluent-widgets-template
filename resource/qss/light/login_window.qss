@@ -1,0 +1,23 @@
+*{
+outline:none;
+}
+
+#frame{
+image: url(:/resource/images/login_background.png) 0 0 0 0 stretch stretch;
+opacity:0.1;
+}
+#form{
+background:rgba(255, 255, 255, 0.5);
+border-radius:10px;
+border: 1px solid rgb(229, 229, 229);
+}
+
+#copyright{
+color:rgba(152, 159, 188, 1);
+background:transparent;
+}
+
+CloseButton {
+    qproperty-normalColor: black;
+    qproperty-normalBackgroundColor: transparent;
+}
